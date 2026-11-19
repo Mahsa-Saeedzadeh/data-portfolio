@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.idea/
+.vscode/
+.venv/
+venv/
+.DS_Store
+
+# Generierte Läufe (CSV-Reports, Splits, Vorhersagen); die .gitkeep-Dateien bleiben
+data/evaluate/*
+data/pre-processed/*
+data/results/*
+data/final-results/*
+!data/**/.gitkeep

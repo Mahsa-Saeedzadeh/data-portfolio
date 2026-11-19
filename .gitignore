@@ -1,0 +1,28 @@
+# Betriebssystem / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Lokale Konfiguration mit Servernamen / Zugangsdaten
+.env
+
+# Rohdaten (siehe data/README.md in den Projekten)
+03-data-engineering-retail-dwh/data/*.csv
+04-data-analytics-har/data/kuhar/*.csv
+04-data-analytics-har/data/har70/*.csv
+
+# Datenbank-Backups
+*.bak
+*.ldf
+*.mdf
+
+# Office-Sperrdateien
+~$*
