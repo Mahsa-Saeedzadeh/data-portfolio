@@ -134,8 +134,8 @@ Zeitfenster × 1 803 Spalten, 18 Aktivitäten, 90 Probanden) und
    Energie) → 24 Features pro Sample; HAR70+ in 3-Sekunden-Fenster aggregiert
 3. K-Means (k = 3) + PCA: ein dominantes Cluster, zwei Ausreißer-Cluster.
    Bewegungsintensität allein trennt die Aktivitäten nicht
-4. Random Forest: nahezu 100 % Accuracy auf KU-HAR; auf HAR70+ sind
-   Alltagsaktivitäten gut, Übergänge schwerer trennbar
+4. Random Forest: 92 % Accuracy auf KU-HAR, 96 % auf HAR70+. Dort liegt der
+   Macro-F1-Score aber nur bei 0,73, seltene Klassen sind also schwächer
 5. Ältere Probanden zeigen deutlich geringere Bewegungsenergie und -varianz
 
 **Technologien:** Jupyter, Python 3.12, pandas, NumPy, scikit-learn, matplotlib, seaborn

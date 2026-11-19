@@ -33,10 +33,13 @@ Probanden (KU-HAR) von denen älterer Menschen (HAR70+)?
 - K-Means bildet ein dominantes Cluster und zwei winzige Ausreißer-Cluster.
   Bewegungsintensität allein trennt die 18 Aktivitäten nicht; die
   Klassenstruktur ist feiner als drei Gruppen.
-- Random Forest erreicht auf KU-HAR nahezu 100 % Accuracy. Die 24 statistischen
-  Features reichen für die stark vorverarbeiteten Laborfenster aus.
-- Auf HAR70+ werden Alltagsaktivitäten (Gehen, Sitzen, Liegen) gut erkannt,
-  Übergänge seltener. Die wichtigsten Features stammen vom Oberschenkelsensor.
+- Random Forest erreicht auf KU-HAR 92 % Accuracy bei einem gewichteten
+  F1-Score von 0,92. Die 24 statistischen Features reichen also aus, um 18
+  Aktivitäten zu trennen. Die Fehler konzentrieren sich auf ähnliche Gangarten:
+  Walk-backward erreicht nur 0,60, Walk-circle 0,83.
+- Auf HAR70+ liegt die Accuracy bei 96 %, der Macro-F1-Score aber nur bei 0,73.
+  Häufige Alltagsaktivitäten werden zuverlässig erkannt, seltene Klassen
+  deutlich schlechter. Die wichtigsten Features stammen vom Oberschenkelsensor.
 - Ältere Probanden zeigen deutlich geringere Varianz und Energie der
   Bewegungen.
 
@@ -49,6 +52,25 @@ jupyter notebook notebooks/har_analysis.ipynb
 ```
 
 Python 3.12, pandas, NumPy, scikit-learn, matplotlib, seaborn.
+
+## Präsentation
+
+[docs/HAR_Praesentation.pptx](docs/HAR_Praesentation.pptx) fasst das Projekt auf
+elf Folien zusammen. GitHub kann PowerPoint-Dateien nicht im Browser anzeigen,
+deshalb hier der Aufbau:
+
+| Folie | Inhalt |
+|---|---|
+| 1 | Titel: Analyse menschlicher Bewegungsmuster aus Sensordaten |
+| 2 | Projektübersicht und Fragestellung |
+| 3 | Die beiden Datensätze im Vergleich |
+| 4 | Explorative Datenanalyse: 55 % aktive, 45 % inaktive Samples |
+| 5 | Feature Engineering: 1 800 Werte je Sample zu 24 Kennzahlen verdichtet |
+| 6 | Clustering mit K-Means und PCA |
+| 7–8 | Klassifikation KU-HAR: 92 % Accuracy, F1-Werte je Aktivität |
+| 9 | Klassifikation HAR70+: 96 % Accuracy |
+| 10 | Datensatzvergleich: Alter, Datentyp, Performance, Feature-Fokus |
+| 11 | Ergebnisse und Fazit |
 
 ## Struktur
 
